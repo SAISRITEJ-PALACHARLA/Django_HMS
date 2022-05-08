@@ -20,7 +20,7 @@ import json
 
 
 import stripe
-stripe.api_key = 'sk_test_51Hu0AzH60lA1oSoomphzz4KWIOkf3fyNb6xKnMTLtZuqrYsafvJvMOQXhqxqOV0vy7EkWSuJxV3GxH5q899R8M8l00MDvjRsHl'
+stripe.api_key = 'sk_test_51KmW8ISHzV8YslbdER9lSru1Cd1psk6FJ0VAWticEYKwf3Nt6JcwHge00tn3orzcM52W4IdrgwPv4Ap9BihM3fmL00ZfwUxGhr'
 
 env = environ.Env(
     # set casting, default value
@@ -212,7 +212,7 @@ class CheckoutView(View):
         )
         person.save()
         try:
-            stripe.api_key = 'sk_test_51Hu0AzH60lA1oSoomphzz4KWIOkf3fyNb6xKnMTLtZuqrYsafvJvMOQXhqxqOV0vy7EkWSuJxV3GxH5q899R8M8l00MDvjRsHl'
+            stripe.api_key = 'sk_test_51KmW8ISHzV8YslbdER9lSru1Cd1psk6FJ0VAWticEYKwf3Nt6JcwHge00tn3orzcM52W4IdrgwPv4Ap9BihM3fmL00ZfwUxGhr'
             checkout_session = stripe.checkout.Session.create(
                 success_url="http://127.0.0.1:8000/success",
                 cancel_url="http://127.0.0.1:8000/cancel",
